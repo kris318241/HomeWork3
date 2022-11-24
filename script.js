@@ -32,6 +32,7 @@ add.onclick = function(){
     let next2 = document.createElement('td');
     next1.innerText = ++row_number;
     next2.innerHTML = "lavanda";
+    
     Row.appendChild(next1);
     Row.appendChild(next2);
     table.appendChild(newRow);
