@@ -7,21 +7,18 @@ make.onclick = function() {
         var table = document.createElement('Table');
         document.body.appendChild(table);
         table.id = 'Table';
-
-        let row_1 = document.createElement('tr');
-        let heading_1 = document.createElement('th');
-        heading_1.innerHTML = "№";
-        let heading_2 = document.createElement('th');
-        heading_2.innerHTML = "Столбец 2";
-
-        row_1.appendChild(heading_1);
-        row_1.appendChild(heading_2);
-        table.appendChild(row_1);
-
+        let row1 = document.createElement('tr');
+        let heading1 = document.createElement('th');
+        heading1.innerHTML = "№";
+        let heading2 = document.createElement('th');
+        heading2.innerHTML = "Столбец 2";
+        row1.appendChild(heading1);
+        row1.appendChild(heading2);
+        table.appendChild(row1);
         first = false;
         add.removeAttribute("disabled");
         delite.removeAttribute("disabled");
-        input-coun.removeAttribute("disabled");
+        inputcoun.removeAttribute("disabled");
     }
     else{
         alert("Ошибка!");
@@ -30,19 +27,16 @@ make.onclick = function() {
 
 add.onclick = function(){
     let table = document.getElementById('Table');
-    let newRow = document.createElement('tr');
+    let Row = document.createElement('tr');
     let next1 = document.createElement('td');
     let next2 = document.createElement('td');
     next1.innerText = ++row_number;
     next2.innerHTML = "lavanda";
-
-    newRow.appendChild(next1);
-    newRow.appendChild(next2);
+    Row.appendChild(next1);
+    Row.appendChild(next2);
     table.appendChild(newRow);
     rows++;
 };
-
-
 
 delite.onclick = function(){
     let table = document.getElementById('Table');
@@ -50,7 +44,7 @@ delite.onclick = function(){
     document.getElementById("inputcoun").value = ""; 
     if(rows > 0){
         if(isNaN(number)){ 
-            alert("Ошибка! Ведите натуральное число");
+            alert("Ошибка! Не натуральное число");
         }
         else{
             let id = 0;
@@ -63,11 +57,11 @@ delite.onclick = function(){
                     alert('Ошибка! Строки с таким номером не существует');
                     return;
                 }
-            table.deleteRow(id);
+            table.delite(id);
             rows--;
         }
     }    
     else{
-        alert("Ошибка! Добавьте строку в таблицу");
+        alert("Ошибка! Нет строк в таблице");
     }
 };
