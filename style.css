@@ -26,16 +26,10 @@ button {
     border: 3px solid white;
     border-radius: 4px;
 }
-button:hover{
-    background: rgb(208, 173, 241);
-    color: black;
-
-
-}
 input {
     margin: 20px 0px;
     padding: 10px 20px;
-	font-size: 15px;
+    font-size: 15px;
     width: 250px;
     height: 32px;
 }
