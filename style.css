@@ -32,11 +32,14 @@ button:hover{
 
 
 }
-
 input {
+    margin: 20px 0px;
     padding: 10px 20px;
 	font-size: 15px;
+    width: 250px;
+    height: 32px;
 }
+
 table {
     display: flex;
     justify-content: center;
