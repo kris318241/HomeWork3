@@ -35,7 +35,7 @@ add.onclick = function(){
     
     Row.appendChild(next1);
     Row.appendChild(next2);
-    table.appendChild(newRow);
+    table.appendChild(Row);
     rows++;
 };
 
